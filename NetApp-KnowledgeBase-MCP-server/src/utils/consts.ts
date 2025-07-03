@@ -1,2 +1,2 @@
-export const WLMAI_URL = `https://${process.env.WLMAI_API_BASE_URL!}`;
-export const BLUEXP_URL = `https://${process.env.BXP_API_BASE_URL!}`;
+export const WLMAI_URL = `https://api.workloads.netapp.com`;
+export const BLUEXP_URL = `https://api.bluexp.netapp.com`;
