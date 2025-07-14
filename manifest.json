@@ -1,0 +1,51 @@
+{
+  "dxt_version": "0.1",
+  "name": "NetApp Workload Factory GenAI Knowledge base mcp-server",
+  "display_name": "NetApp workload factory for GenAI Knowledge bases",
+  "version": "1.0.0",
+  "description": "MCP server for Workload factory GenAI Knowledge bases retrieval",
+  "long_description": "Workload factory GenAI Knowledge bases MCP server enables access to your organizational knowledge bases. Supports multiple Knowledge bases as tools to enhance your agentic workflow with organizational data.https://github.com/NetApp/mcp/tree/main/NetApp-KnowledgeBase-MCP-server",
+  "author": {
+    "name": "NetApp"
+  },
+  "homepage": "http://www.netapp.com/",
+  "server": {
+    "type": "node",
+    "entry_point": "build/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/build/index.js"
+      ],
+      "env": {
+          "ACCOUNT_ID": "${user_config.tenancy_account_ID}",
+          "CLIENT_ID": "${user_config.client_ID}",
+          "CLIENT_SECRET": "${user_config.client_SECRET}"
+      }
+    }
+  },
+  "user_config": {
+    "tenancy_account_ID": {
+      "type": "string",
+      "title": "Tenancy_account_ID",
+      "description": "Tenancy account id",
+      "required": true,
+      "sensitive": false
+    },
+    "client_ID": {
+      "type": "string",
+      "title": "client_ID",
+      "description": "client id",
+      "required": true,
+      "sensitive": false
+    },
+    "client_SECRET": {
+      "type": "string",
+      "title": "client secret",
+      "description": "client secret",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "license": "ISC"
+}
