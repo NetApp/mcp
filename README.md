@@ -9,11 +9,11 @@ This repository contains a directory of all official NetApp MCP servers.
 | [NetApp DataOps Toolkit MCP Server for ONTAP](https://github.com/NetApp/netapp-dataops-toolkit/blob/main/netapp_dataops_traditional/docs/mcp_server.md) | Local (stdio) | End-user self-service volume provisioning and management for [NetApp ONTAP](https://www.netapp.com/ontap-data-management-software/). | <ul><li>NetApp AFX</li> <li>NetApp AFF</li> <li>NetApp FAS</li> <li>Amazon FSx for NetApp ONTAP</li> <li>NetApp Cloud Volumes ONTAP</li> <li>NetApp ONTAP Select</li></ul> |
 | [NetApp DataOps Toolkit MCP Server for Azure NetApp Files](https://github.com/NetApp/netapp-dataops-toolkit/blob/main/netapp_dataops_traditional/docs/anf_mcp_server_readme.md) | Local (stdio) | End-user self-service volume provisioning and management for [Azure NetApp Files](https://azure.microsoft.com/en-us/products/netapp). | <ul><li>Azure NetApp Files</li></ul> |
 | [NetApp DataOps Toolkit MCP Server for Google Cloud NetApp Volumes](https://github.com/NetApp/netapp-dataops-toolkit/blob/main/netapp_dataops_traditional/docs/gcnv_mcp_server_readme.md) | Local (stdio) | End-user self-service volume provisioning and management for [Google Cloud NetApp Volumes](https://cloud.google.com/netapp-volumes). | <ul><li>Google Cloud NetApp Volumes</li></ul> |
-| [NetApp DataOps Toolkit MCP Server for Kubernetes](https://github.com/NetApp/netapp-dataops-toolkit/blob/main/netapp_dataops_k8s/docs/mcp_server_k8s.md) | Local (stdio) | End-user self-service volume and JupyterLab workspace provisioning and management in Kubernetes (utilizes NetApp's [Trident](https://docs.netapp.com/us-en/trident/index.html) CSI Driver). | <ul><li>NetApp Trident</li></ul> | 
-| [NetApp Workload Factory GenAI KnowledgeBase MCP Server](/NetApp-KnowledgeBase-MCP-server) | Local (stdio) | Search across [NetApp Workload Factory](https://console.workloads.netapp.com) GenAI knowledge bases. | <ul><li>NetApp Workload Factory GenAI</li></ul> |
-
+| [NetApp DataOps Toolkit MCP Server for Kubernetes](https://github.com/NetApp/netapp-dataops-toolkit/blob/main/netapp_dataops_k8s/docs/mcp_server_k8s.md) | Local (stdio) | End-user self-service volume and JupyterLab workspace provisioning and management in Kubernetes (utilizes NetApp's [Trident](https://docs.netapp.com/us-en/trident/index.html) CSI Driver). | <ul><li>NetApp Trident</li></ul> |
 
 ## License
+
+> Note: This licensing information applies to this repository. Other repositories that are linked to from this README will have their own licenses.
 
 Licensed under the Apache License, Version 2.0 (the "License").
 
