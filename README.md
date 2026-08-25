@@ -239,20 +239,11 @@ Every new or updated entry should state:
 [neo-overview]: https://netapp.github.io/Innovation-Labs/projects/mlai/neo/core/introduction.html
 [neo-source]: https://github.com/NetApp/Innovation-Labs
 
-## License
+## Licensing
 
-> Note: This licensing information applies to this repository. Other
-> repositories linked from this README have their own licenses.
+Except where otherwise noted, content maintained directly in this catalog
+repository is licensed under the Apache License 2.0; see [LICENSE](LICENSE).
+Linked projects and products are separate works governed by their own licenses
+and terms.
 
-Licensed under the Apache License, Version 2.0 (the "License").
-
-You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
-
-Unless required by applicable law or agreed to in writing, software distributed
-under the License is distributed on an _"AS IS"_ basis, without WARRANTIES or
-conditions of any kind, either express or implied.
-
-See the License for the specific language governing permissions and limitations
-under the License.
-
-© 2026 NetApp, Inc. All Rights Reserved.
+Copyright © 2026 NetApp, Inc.
