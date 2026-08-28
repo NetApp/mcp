@@ -14,7 +14,6 @@ product you own.
 | Administer ONTAP across one or more clusters | [ONTAP MCP Server](#ontap-mcp-server) | Broad ONTAP administration across NAS, SAN, NVMe, data protection, and core storage services |
 | Identify infrastructure problems, investigate performance, and plan capacity | [Harvest MCP Server](#harvest-mcp-server) | Uses current and historical Harvest telemetry from Prometheus or VictoriaMetrics across ONTAP, E-Series, and StorageGRID; Cisco Nexus adds ecosystem visibility |
 | Manage Google Cloud NetApp Volumes end to end | [Google Cloud NetApp Volumes MCP Server](#google-cloud-netapp-volumes-mcp-server) | Broad GCNV control-plane coverage, including pools, protection, security, NAS, and iSCSI |
-| Give agents semantic access to content indexed by AIDE | [AI Data Engine MCP Server](#ai-data-engine-aide-mcp-server) | Reuses AIDE's vector search to ground agent responses in relevant enterprise content |
 | Search existing file shares while preserving user permissions | [NetApp Neo MCP Server](#netapp-neo-mcp-server-early-access) | Makes indexed SMB, NFS, and S3 content available to AI with identity-aware access control |
 | Provision, clone, and protect datasets or workspaces | [NetApp DataOps Toolkit MCP server family](#netapp-dataops-toolkit-mcp-server-family) | Four task-focused MCP servers for ONTAP, Azure NetApp Files, Google Cloud NetApp Volumes, and Kubernetes, with self-service workflows for developers, data scientists, and platform teams |
 
@@ -94,23 +93,6 @@ identity integration, encryption, and block and file storage.
   pools.
 - **Start here:** [Source and setup](https://github.com/NetApp/gcnv-mcp-server)
 
-### AI Data Engine (AIDE) MCP Server
-
-**Ground AI responses in content already indexed by AIDE.** The server exposes
-AIDE's vector-based semantic search through MCP, allowing an agent to retrieve
-the documents most relevant to a user's question.
-
-- **Use it when:** You already use NetApp AI Data Engine and want an MCP client
-  to use its RAG search as a source of enterprise context.
-- **Coverage:** A focused `netapp_data_engine_search` tool for semantic document
-  retrieval through the AIDE RAG API. It retrieves content; it does not manage
-  storage or ingest data.
-- **Runs as:** A local stdio server, distributed as the `netapp-aide-mcp`
-  Python package.
-- **Works with:** NetApp AI Data Engine.
-- **Start here:** [Source and setup][aide-source] ·
-  [AIDE documentation][aide-docs]
-
 ### NetApp Neo MCP Server (Early Access)
 
 **Make existing enterprise file content useful to AI without migrating the
@@ -130,10 +112,6 @@ set of AI platforms.
 - **Works with:** NetApp Neo and the file shares it has indexed.
 - **Start here:** [MCP guide][neo-mcp] ·
   [NetApp Neo overview][neo-overview] · [Source][neo-source]
-
-Choose AIDE when semantic retrieval from an existing AIDE knowledge base is the
-goal. Choose Neo when you need to crawl file shares, preserve file-level access,
-and expose search and content retrieval to multiple AI ecosystems.
 
 ### NetApp DataOps Toolkit MCP server family
 
@@ -206,9 +184,6 @@ as Python packages.
   not make configuration changes. For observe-to-act workflows, pair it with
   the relevant active management MCP server, such as ONTAP MCP, to execute an
   approved action.
-- **AIDE MCP vs. Neo MCP:** AIDE provides semantic search over an existing AIDE
-  index. Neo builds a permission-aware search and retrieval layer over
-  enterprise file shares.
 
 ## Catalog scope
 
@@ -233,8 +208,6 @@ Every new or updated entry should state:
 
 [harvest-docs]: https://netapp.github.io/harvest/latest/mcp/overview/
 [harvest-source]: https://github.com/NetApp/harvest
-[aide-source]: https://github.com/NetApp/aide-mcp-server
-[aide-docs]: https://docs.netapp.com/us-en/ai-data-engine/index.html
 [neo-mcp]: https://netapp.github.io/Innovation-Labs/projects/mlai/neo/core/m-mcp.html
 [neo-overview]: https://netapp.github.io/Innovation-Labs/projects/mlai/neo/core/introduction.html
 [neo-source]: https://github.com/NetApp/Innovation-Labs
