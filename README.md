@@ -14,7 +14,6 @@ product you own.
 | Administer ONTAP across one or more clusters | [ONTAP MCP Server](#ontap-mcp-server) | Broad ONTAP administration across NAS, SAN, NVMe, data protection, and core storage services |
 | Identify infrastructure problems, investigate performance, and plan capacity | [Harvest MCP Server](#harvest-mcp-server) | Uses current and historical Harvest telemetry from Prometheus or VictoriaMetrics across ONTAP, E-Series, and StorageGRID; Cisco Nexus adds ecosystem visibility |
 | Manage Google Cloud NetApp Volumes end to end | [Google Cloud NetApp Volumes MCP Server](#google-cloud-netapp-volumes-mcp-server) | Broad GCNV control-plane coverage, including pools, protection, security, NAS, and iSCSI |
-| Search existing file shares while preserving user permissions | [NetApp Neo MCP Server](#netapp-neo-mcp-server-early-access) | Makes indexed SMB, NFS, and S3 content available to AI with identity-aware access control |
 | Provision, clone, and protect datasets or workspaces | [NetApp DataOps Toolkit MCP server family](#netapp-dataops-toolkit-mcp-server-family) | Four task-focused MCP servers for ONTAP, Azure NetApp Files, Google Cloud NetApp Volumes, and Kubernetes, with self-service workflows for developers, data scientists, and platform teams |
 
 ## MCP server details
@@ -92,26 +91,6 @@ identity integration, encryption, and block and file storage.
 - **Works with:** Google Cloud NetApp Volumes, including ONTAP-mode storage
   pools.
 - **Start here:** [Source and setup](https://github.com/NetApp/gcnv-mcp-server)
-
-### NetApp Neo MCP Server (Early Access)
-
-**Make existing enterprise file content useful to AI without migrating the
-underlying storage or weakening file permissions.** NetApp Neo indexes
-unstructured data and exposes permission-aware search and retrieval to a broad
-set of AI platforms.
-
-- **Use it when:** You need an on-premises or sovereign path from enterprise
-  file shares to ChatGPT Enterprise, Claude, Azure AI, Google agent platforms,
-  or custom agents.
-- **Coverage:** File and full-text search, windowed content retrieval, share
-  discovery, and named-entity search across indexed SMB, NFS, and S3 data.
-  Results can be filtered using existing ACLs mapped to Microsoft Entra
-  identities.
-- **Runs as:** A Streamable HTTP endpoint within the containerized NetApp Neo
-  deployment, with OAuth 2.0 or API-key authentication.
-- **Works with:** NetApp Neo and the file shares it has indexed.
-- **Start here:** [MCP guide][neo-mcp] ·
-  [NetApp Neo overview][neo-overview] · [Source][neo-source]
 
 ### NetApp DataOps Toolkit MCP server family
 
@@ -208,9 +187,6 @@ Every new or updated entry should state:
 
 [harvest-docs]: https://netapp.github.io/harvest/latest/mcp/overview/
 [harvest-source]: https://github.com/NetApp/harvest
-[neo-mcp]: https://netapp.github.io/Innovation-Labs/projects/mlai/neo/core/m-mcp.html
-[neo-overview]: https://netapp.github.io/Innovation-Labs/projects/mlai/neo/core/introduction.html
-[neo-source]: https://github.com/NetApp/Innovation-Labs
 
 ## Licensing
 
