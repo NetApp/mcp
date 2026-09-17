@@ -11,39 +11,13 @@ you need—not simply the product you own.
 
 | What you want an AI agent to do | Start with | Why |
 | --- | --- | --- |
-| Ground answers and workflows in official NetApp technical documentation | [docs.netapp.com MCP server](#docsnetappcom-mcp-server) | Focused remote service for searching and retrieving published documentation and generating RAG-based answers without a custom integration |
 | Administer ONTAP across one or more clusters | [ONTAP MCP Server](#ontap-mcp-server) | Broad ONTAP administration across NAS, SAN, NVMe, data protection, and core storage services |
 | Identify infrastructure problems, investigate performance, and plan capacity | [Harvest MCP Server](#harvest-mcp-server) | Uses current and historical Harvest telemetry from Prometheus or VictoriaMetrics across ONTAP, E-Series, and StorageGRID; Cisco Nexus adds ecosystem visibility |
 | Manage Google Cloud NetApp Volumes end to end | [Google Cloud NetApp Volumes MCP Server](#google-cloud-netapp-volumes-mcp-server) | Broad GCNV control-plane coverage, including pools, protection, security, NAS, and iSCSI |
 | Provision, clone, and protect datasets or workspaces | [NetApp DataOps Toolkit MCP server family](#netapp-dataops-toolkit-mcp-server-family) | Four task-focused MCP servers for ONTAP, Azure NetApp Files, Google Cloud NetApp Volumes, and Kubernetes, with self-service workflows for developers, data scientists, and platform teams |
+| Ground answers and workflows in official NetApp technical documentation | [docs.netapp.com MCP server](#docsnetappcom-mcp-server) | Focused remote service for searching and retrieving published documentation and generating RAG-based answers without a custom integration |
 
 ## MCP server details
-
-### docs.netapp.com MCP server
-
-**Bring trusted NetApp technical knowledge into the agent workflow.** Give
-development, engineering, and support agents a standard interface to find
-official NetApp product documentation, retrieve article content, and generate
-documentation-grounded answers without building a custom REST, search, or RAG
-pipeline.
-
-- **Use it when:** Developers, engineers, support teams, or custom AI agents
-  need official NetApp product and procedure context inside an MCP-compliant
-  client.
-- **Coverage:** Keyword and natural-language documentation search, structured
-  retrieval of complete page and article content, RAG-based answer generation,
-  and service health. Its source is content published to docs.netapp.com; it
-  does not access private tenant data or internal user profiles, and it does not
-  provide product telemetry, cluster state, or other environment-specific data.
-- **Runs as:** A NetApp-hosted remote HTTP endpoint, deployed statelessly on
-  scalable cloud infrastructure.
-- **Works with:** Visual Studio Code with GitHub Copilot, Claude Desktop,
-  Cursor, custom Python agent frameworks, and other supported MCP-compliant
-  clients. Network access and a valid subscription key are required; request a
-  key from `ng-docs-mcp@netapp.com` with a brief description of the use case.
-- **Start here:** [Get started][docs-mcp-get-started] ·
-  [Learn about the server][docs-mcp-learn] ·
-  [Developer reference][docs-mcp-reference]
 
 ### ONTAP MCP Server
 
@@ -172,6 +146,32 @@ as Python packages.
   for NetApp ONTAP, Azure NetApp Files, Google Cloud NetApp Volumes, or Cloud
   Volumes ONTAP.
 - **Start here:** [Documentation and setup](https://github.com/NetApp/netapp-dataops-toolkit/blob/main/netapp_dataops_k8s/docs/mcp_server_k8s.md)
+
+### docs.netapp.com MCP server
+
+**Bring trusted NetApp technical knowledge into the agent workflow.** Give
+development, engineering, and support agents a standard interface to find
+official NetApp product documentation, retrieve article content, and generate
+documentation-grounded answers without building a custom REST, search, or RAG
+pipeline.
+
+- **Use it when:** Developers, engineers, support teams, or custom AI agents
+  need official NetApp product and procedure context inside an MCP-compliant
+  client.
+- **Coverage:** Keyword and natural-language documentation search, structured
+  retrieval of complete page and article content, RAG-based answer generation,
+  and service health. Its source is content published to docs.netapp.com; it
+  does not access private tenant data or internal user profiles, and it does not
+  provide product telemetry, cluster state, or other environment-specific data.
+- **Runs as:** A NetApp-hosted remote HTTP endpoint, deployed statelessly on
+  scalable cloud infrastructure.
+- **Works with:** Visual Studio Code with GitHub Copilot, Claude Desktop,
+  Cursor, custom Python agent frameworks, and other supported MCP-compliant
+  clients. Network access and a valid subscription key are required; request a
+  key from `ng-docs-mcp@netapp.com` with a brief description of the use case.
+- **Start here:** [Get started][docs-mcp-get-started] ·
+  [Learn about the server][docs-mcp-learn] ·
+  [Developer reference][docs-mcp-reference]
 
 ## Similar names, different jobs
 
