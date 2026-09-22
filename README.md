@@ -16,6 +16,7 @@ you need—not simply the product you own.
 | Manage Google Cloud NetApp Volumes end to end | [Google Cloud NetApp Volumes MCP Server](#google-cloud-netapp-volumes-mcp-server) | Broad GCNV control-plane coverage, including pools, protection, security, NAS, and iSCSI |
 | Provision, clone, and protect datasets or workspaces | [NetApp DataOps Toolkit MCP server family](#netapp-dataops-toolkit-mcp-server-family) | Four task-focused MCP servers for ONTAP, Azure NetApp Files, Google Cloud NetApp Volumes, and Kubernetes, with self-service workflows for developers, data scientists, and platform teams |
 | Ground answers and workflows in official NetApp technical documentation | [docs.netapp.com MCP server](#docsnetappcom-mcp-server) | Focused remote service for searching and retrieving published documentation and generating RAG-based answers without a custom integration |
+| Review risks, security recommendations, upgrade readiness, and AutoSupport for your NetApp systems | [Active IQ MCP Server](#active-iq-mcp-server) | Uses the AutoSupport data your systems already send to NetApp, so there is nothing to deploy or integrate; covers risks, security recommendations and remediation, support cases, contracts, and upgrade guidance |
 
 ## MCP server details
 
@@ -173,6 +174,35 @@ pipeline.
   [Learn about the server][docs-mcp-learn] ·
   [Developer reference][docs-mcp-reference]
 
+### Active IQ MCP Server
+
+**Give agents Active IQ insights in the tools they already use.** Ask which
+systems have critical risks and what to do about them, which security
+recommendations apply, which clusters are due for an upgrade, which systems are
+approaching end of support, the status of a support case, or what a recent
+AutoSupport shows. Answers come from NetApp's analysis of the AutoSupport data
+your systems already send, so an agent can go from a question to a recommended
+action without a custom integration.
+
+- **Use it when:** Storage and operations teams want risk, security, upgrade,
+  and AutoSupport answers inside the AI client they already use—or you are
+  building agents and automations that need that context for your NetApp
+  systems.
+- **Coverage:** Search and discovery across systems, clusters, sites, and
+  watchlists; contract and AutoSupport status; risks, security recommendations,
+  and corrective actions; support cases; Upgrade Advisor recommendations;
+  AutoSupport records and raw section content; and custom on-the-fly GraphQL
+  queries. The server is read-only: it cannot modify systems, and results are
+  limited to what the authenticated user is authorized to see.
+- **Runs as:** A NetApp-hosted remote HTTP endpoint.
+- **Works with:** MCP clients that support remote HTTP servers and custom
+  request headers, such as Cursor, Claude Desktop, and Visual Studio Code with
+  GitHub Copilot. Requires access to Digital Advisor—the NetApp service that
+  analyzes AutoSupport data from your installed systems—plus API registration
+  and a personal access token (PAT).
+- **Start here:** [Learn about the server][active-iq-mcp-learn] ·
+  [Get started][active-iq-mcp-get-started]
+
 ## Similar names, different jobs
 
 - **docs.netapp.com MCP vs. operational MCP servers:** Choose docs.netapp.com
@@ -220,6 +250,8 @@ Every new or updated entry should state:
 
 [harvest-docs]: https://netapp.github.io/harvest/latest/mcp/overview/
 [harvest-source]: https://github.com/NetApp/harvest
+[active-iq-mcp-learn]: https://docs.netapp.com/us-en/digital-advisor-automation/learn-digital-advisor-mcp.html
+[active-iq-mcp-get-started]: https://docs.netapp.com/us-en/digital-advisor-automation/get-started-digital-advisor-mcp.html
 [docs-mcp-get-started]: https://docs.netapp.com/us-en/about/mcp-server-get-started.html
 [docs-mcp-learn]: https://docs.netapp.com/us-en/about/mcp-server-learn.html
 [docs-mcp-reference]: https://docs.netapp.com/us-en/about/mcp-developer-reference.html
