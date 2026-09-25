@@ -17,6 +17,7 @@ you need—not simply the product you own.
 | Provision, clone, and protect datasets or workspaces | [NetApp DataOps Toolkit MCP server family](#netapp-dataops-toolkit-mcp-server-family) | Four task-focused MCP servers for ONTAP, Azure NetApp Files, Google Cloud NetApp Volumes, and Kubernetes, with self-service workflows for developers, data scientists, and platform teams |
 | Ground answers and workflows in official NetApp technical documentation | [docs.netapp.com MCP server](#docsnetappcom-mcp-server) | Focused remote service for searching and retrieving published documentation and generating RAG-based answers without a custom integration |
 | Review risks, security recommendations, upgrade readiness, and AutoSupport for your NetApp systems | [Active IQ MCP Server](#active-iq-mcp-server) | Uses the AutoSupport data your systems already send to NetApp, so there is nothing to deploy or integrate; covers risks, security recommendations and remediation, support cases, contracts, and upgrade guidance |
+| Investigate infrastructure health, performance, capacity, alerts, logs, and collection status in Data Infrastructure Insights | [DII MCP Server](#dii-mcp-server) | Brings tenant-scoped DII inventory, telemetry, events, alerts, collector health, and notification posture into natural-language, read-only investigations |
 
 ## MCP server details
 
@@ -203,6 +204,34 @@ action without a custom integration.
 - **Start here:** [Learn about the server][active-iq-mcp-learn] ·
   [Get started][active-iq-mcp-get-started]
 
+### DII MCP Server
+
+**Investigate your DII tenant from inventory to operational context.** Give AI
+assistants a tenant-scoped, read-only view of normalized infrastructure
+resources, performance and capacity telemetry, logs and events, alerts and
+monitors, and collection health. For DII users, it goes beyond time-series
+telemetry by adding collector, notification, and maintenance-window context
+from the same tenant.
+
+- **Use it when:** You use Data Infrastructure Insights and want to validate
+  collection coverage and freshness, prioritize active infrastructure issues,
+  identify capacity risk, troubleshoot performance, check Kubernetes collector
+  currency, or review notification routing and suppression.
+- **Coverage:** 26 read-only tools across acquisition units, alerts, data
+  collectors, logs and events, maintenance windows, monitors, notification
+  rules and webhook target metadata, infrastructure objects and metrics, and
+  Kubernetes collectors. Available inventory includes storage, virtualization,
+  Kubernetes, ONTAP, Azure NetApp Files, StorageGRID, and related resources.
+- **Runs as:** A remote HTTP endpoint supplied for your DII environment at
+  `https://<DII_HOST_URL>/api/v1/mcp`.
+- **Works with:** Cursor, Claude Code, VS Code, Codex, and other MCP-compatible
+  clients that support remote HTTP and your organization's authentication
+  method. Requires a DII tenant, an authorized user or service identity, the
+  supplied endpoint, and a token generated under Admin > API Access > MCP
+  Configuration.
+- **Start here:** [Overview][dii-mcp-overview] · [Setup][dii-mcp-setup] ·
+  [Tool reference][dii-mcp-tools]
+
 ## Similar names, different jobs
 
 - **docs.netapp.com MCP vs. operational MCP servers:** Choose docs.netapp.com
@@ -255,6 +284,9 @@ Every new or updated entry should state:
 [docs-mcp-get-started]: https://docs.netapp.com/us-en/about/mcp-server-get-started.html
 [docs-mcp-learn]: https://docs.netapp.com/us-en/about/mcp-server-learn.html
 [docs-mcp-reference]: https://docs.netapp.com/us-en/about/mcp-developer-reference.html
+[dii-mcp-overview]: https://review.docs.netapp.com/us-en/data-infrastructure-insights_mcp_docs/mcp_overview.html
+[dii-mcp-setup]: https://review.docs.netapp.com/us-en/data-infrastructure-insights_mcp_docs/mcp_setup.html
+[dii-mcp-tools]: https://review.docs.netapp.com/us-en/data-infrastructure-insights_mcp_docs/mcp_tools_overview.html
 
 ## Licensing
 
