@@ -284,9 +284,9 @@ Every new or updated entry should state:
 [docs-mcp-get-started]: https://docs.netapp.com/us-en/about/mcp-server-get-started.html
 [docs-mcp-learn]: https://docs.netapp.com/us-en/about/mcp-server-learn.html
 [docs-mcp-reference]: https://docs.netapp.com/us-en/about/mcp-developer-reference.html
-[dii-mcp-overview]: https://review.docs.netapp.com/us-en/data-infrastructure-insights_mcp_docs/mcp_overview.html
-[dii-mcp-setup]: https://review.docs.netapp.com/us-en/data-infrastructure-insights_mcp_docs/mcp_setup.html
-[dii-mcp-tools]: https://review.docs.netapp.com/us-en/data-infrastructure-insights_mcp_docs/mcp_tools_overview.html
+[dii-mcp-overview]: https://docs.netapp.com/us-en/data-infrastructure-insights/mcp_overview.html
+[dii-mcp-setup]: https://docs.netapp.com/us-en/data-infrastructure-insights/mcp_setup.html
+[dii-mcp-tools]: https://docs.netapp.com/us-en/data-infrastructure-insights/mcp_tools_overview.html
 
 ## Licensing
 
