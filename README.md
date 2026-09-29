@@ -9,6 +9,8 @@ you need—not simply the product you own.
 
 ## Choose by outcome
 
+<!-- markdownlint-disable MD060 -->
+
 | What you want an AI agent to do | Start with | Why |
 | --- | --- | --- |
 | Administer ONTAP across one or more clusters | [ONTAP MCP Server](#ontap-mcp-server) | Broad ONTAP administration across NAS, SAN, NVMe, data protection, and core storage services |
@@ -18,6 +20,9 @@ you need—not simply the product you own.
 | Ground answers and workflows in official NetApp technical documentation | [docs.netapp.com MCP server](#docsnetappcom-mcp-server) | Focused remote service for searching and retrieving published documentation and generating RAG-based answers without a custom integration |
 | Review risks, security recommendations, upgrade readiness, and AutoSupport for your NetApp systems | [Active IQ MCP Server](#active-iq-mcp-server) | Uses the AutoSupport data your systems already send to NetApp, so there is nothing to deploy or integrate; covers risks, security recommendations and remediation, support cases, contracts, and upgrade guidance |
 | Investigate infrastructure health, performance, capacity, alerts, logs, and collection status in Data Infrastructure Insights | [DII MCP Server](#dii-mcp-server) | Brings tenant-scoped DII inventory, telemetry, events, alerts, collector health, and notification posture into natural-language, read-only investigations |
+| Turn NetApp AIQ Digital Advisor data into specialist health, troubleshooting, and remediation guidance                        | [Digital Coach Model Context Protocol (MCP) Server](#digital-coach-model-context-protocol-mcp-server) | Synthesizes Digital Advisor, hardware, knowledge, documentation, EMS, and AutoSupport context for expert-level reasoning instead of returning only raw records                                                    |
+
+<!-- markdownlint-enable MD060 -->
 
 ## MCP server details
 
@@ -232,6 +237,36 @@ from the same tenant.
 - **Start here:** [Overview][dii-mcp-overview] · [Setup][dii-mcp-setup] ·
   [Tool reference][dii-mcp-tools]
 
+### Digital Coach Model Context Protocol (MCP) Server
+
+**Get specialist reasoning, not just raw telemetry and operational records.**
+Give compatible AI apps and agents expert-level, multi-source synthesis to
+identify root causes, score risk, and provide evidence-backed remediation and
+business-value guidance.
+
+- **Use it when:** You need deep cluster health checks with risk scoring and
+  step-by-step remediation, detailed hardware topology, configuration-drift or
+  recent-change summaries, deep system analysis, official NetApp and ONTAP
+  knowledge with CLI guidance, or business-value and ROI insights.
+- **Coverage:** Seven read-only tools—`find_entities`,
+  `ask_netapp_knowledge`, `run_health_check`, `get_hardware_configuration`,
+  `get_value_insights`, `get_change_summary`, and
+  `ask_system_telemetry`—combine Active IQ/Digital Advisor, Hardware Universe,
+  Knowledge Base, product documentation, EMS events, and AutoSupport/historical
+  telemetry. They cover hardware topology (shelves, disks, ports, and
+  firmware), change summaries from consecutive AutoSupport bundles, and deep
+  system telemetry such as policies, relationships, counters, and aggregates.
+  The server never modifies cluster configuration or storage state, and results
+  are limited to what the authenticated user is authorized to see.
+- **Runs as:** A NetApp-hosted remote HTTP endpoint supplied during onboarding.
+- **Works with:** Clients that support remote HTTP and custom headers, including
+  Claude Desktop, Cursor, and custom agents. Requires an Active IQ account with
+  the Digital Coach role and a NetApp JWT/OAuth access token in an
+  `Authorization: Bearer` header. JWTs expire after 60 minutes; PATs are not
+  supported.
+- **Availability:** Approved Early Access Program participants.
+- **Start here:** [Request early access][digital-coach-eap]
+
 ## Similar names, different jobs
 
 - **docs.netapp.com MCP vs. operational MCP servers:** Choose docs.netapp.com
@@ -255,6 +290,10 @@ from the same tenant.
   not make configuration changes. For observe-to-act workflows, pair it with
   the relevant active management MCP server, such as ONTAP MCP, to execute an
   approved action.
+- **Digital Coach MCP vs. Active IQ MCP:** Choose Active IQ MCP when an agent
+  needs structured Digital Advisor records for its own automation and
+  reasoning. Choose Digital Coach MCP when it needs multi-source synthesis,
+  root-cause analysis, remediation plans, and specialist guidance.
 
 ## Catalog scope
 
@@ -287,6 +326,7 @@ Every new or updated entry should state:
 [dii-mcp-overview]: https://docs.netapp.com/us-en/data-infrastructure-insights/mcp_overview.html
 [dii-mcp-setup]: https://docs.netapp.com/us-en/data-infrastructure-insights/mcp_setup.html
 [dii-mcp-tools]: https://docs.netapp.com/us-en/data-infrastructure-insights/mcp_tools_overview.html
+[digital-coach-eap]: https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=oBEJS5uSFUeUS8A3RRZbOsssLxTVCFxHlhF7IayUVZFUN1hGMEtBMjJaTUJPRDlTMlhJVVczNVo5TC4u
 
 ## Licensing
 
