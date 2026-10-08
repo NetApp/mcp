@@ -7,6 +7,15 @@ technical documentation, storage operations, infrastructure telemetry, and
 enterprise data. Use this catalog to choose the server that matches the outcome
 you need—not simply the product you own.
 
+## New to MCP servers?
+
+MCP is an open standard that gives AI applications a consistent way to connect
+to external data, tools, and workflows. Start with the vendor-neutral
+[official MCP introduction](https://modelcontextprotocol.io/docs/getting-started/intro)
+for the fundamentals. For optional hands-on practice, see DeepLearning.AI's
+[*MCP: Build Rich-Context AI Apps with Anthropic*](https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic);
+it is supplemental training, not NetApp product documentation.
+
 ## Choose by outcome
 
 <!-- markdownlint-disable MD060 -->
